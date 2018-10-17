@@ -1,17 +1,11 @@
-<figure>
-    <figcaption>
-        <p><b>{{ page.label }}:</b> {{ page.title }}</p>
-        <p>{{ page.description | markdownify }}</p>
-    </figcaption>
-
-    {% if page.embed %}
-        <div>
-            <iframe src="{{ page.embed.url }}"
-                width="{{ page.embed.width }}"
-                height="{{ page.embed.height }}"
-                allowfullscreen></iframe>
-        </div>
-    {% else %}
-        <img src="{{ page.image }}">
-    {% endif %}
-</figure>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <style>figure { margin: 0 auto; }</style>
+</head>
+<body>
+    <figure>{{ content }}</figure>
+</body>
+</html>
